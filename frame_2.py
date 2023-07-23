@@ -1,13 +1,13 @@
-import tkinter as tk
+import tkinter
 
-def show_next_page():
-    frame.pack_forget()
-    frame_2.pack()
-
+# frame 2 widgets
 def create_frame_2(parent_frame):
-    frame_2 = tk.Frame(parent_frame, bg="#934AB3")
+    frame_2 = tkinter.Frame(parent_frame, bg="#3F1651", width=parent_frame.winfo_width(), height=parent_frame.winfo_height())
 
-    label_frame_2 = tk.Label(frame_2, text="try lang next page", bg="#934AB3", fg="#FFB6C1", font=("Arial", 18))
-    label_frame_2.pack(pady=30)
+    full_name_2 = tkinter.Label(frame_2, text="Full Name:", bg="#3F1651", fg="#E6A1D7", font=("Arial", 12))
+    full_name_2.grid(row=0, column=0, pady=10)
+
+    entry_name = tkinter.Entry(frame_2, bg="white", fg="black", font=("Arial", 12))
+    entry_name.grid(row=0, column=1, pady=10)
 
     return frame_2
