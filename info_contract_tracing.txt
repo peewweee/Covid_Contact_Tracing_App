@@ -12,3 +12,10 @@ Vaccination:
 COVID-19 Test: 
 Symptoms:
 COVID-19 Exposure:
+Name: p
+Age: 0
+Phone Number: 12
+Vaccination: 
+COVID-19 Test: 
+Symptoms:
+COVID-19 Exposure:
