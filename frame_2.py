@@ -115,7 +115,7 @@ def create_frame_2(parent_frame):
         frame_3_frame = frame_3.create_frame_3(parent_frame)
         frame_3_frame.pack(fill=tkinter.BOTH, expand=True)
 
-    save_button = tkinter.Button(frame_2, text="Submit", bg="#F5AE52", fg="#F76301", font=("Arial", 12), command=save_info)
+    save_button = tkinter.Button(frame_2, text="Submit", bg="#1B7979", fg="#F2C75B", font=("Arial", 12, "bold"), width=20, command=save_info)
     save_button.pack(pady=10)
 
     return frame_2

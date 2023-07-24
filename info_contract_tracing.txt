@@ -1,20 +1,13 @@
-Name: fef
+Name: 
 Age: 0
-Phone Number: 854
+Phone Number: 3
 Vaccination: 
 COVID-19 Test: 
 Symptoms:
 COVID-19 Exposure:
-Name: wa
+Name: 
 Age: 0
-Phone Number: 23
-Vaccination: 
-COVID-19 Test: 
-Symptoms:
-COVID-19 Exposure:
-Name: p
-Age: 0
-Phone Number: 12
+Phone Number: 2
 Vaccination: 
 COVID-19 Test: 
 Symptoms:
