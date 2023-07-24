@@ -87,6 +87,9 @@ def create_frame_2(parent_frame):
         save_age = int(entry_age.get())
         save_num = num_entry.get()
         save_vaccine = vaccine_options.get()
+        save_test = test_options.get()
+        save_exposure = [exposure_options[i] for i, var in enumerate(var_exposure) if var.get() == 1]
+        save_symptoms = [symptoms_options[i] for i, var in enumerate(var_symptoms) if var.get() == 1]
 
         # error window for phone number
         if not save_num.isdigit():
@@ -98,19 +101,15 @@ def create_frame_2(parent_frame):
             file.write(f"Age: {save_age}\n")
             file.write(f"Phone Number: {save_num}\n")
             file.write(f"Vaccination: {save_vaccine}\n")
+            file.write(f"COVID-19 Test: {save_test}\n")
+            file.write("Symptoms:\n")
+            for symptom in save_symptoms:
+                file.write(f"- {symptom}\n")
+            file.write(f"COVID-19 Exposure:\n")
+            for exposure in save_exposure:
+                file.write(f"- {exposure}\n")
 
-        # error window for phone number
-        if not save_num.isdigit():
-            messagebox.showerror("Error", "Please enter a valid phone number (numeric value).")
-            return
-
-        with open("info_contract_tracing.txt", "a") as file:
-            file.write(f"Name: {save_name}\n")
-            file.write(f"Age: {save_age}\n")
-            file.write(f"Phone Number: {save_num}\n")
-            file.write(f"Vaccination: {save_vaccine}\n")
-
-    save_button = tkinter.Button(frame_2, text="Save", bg="#F5AE52", fg="#F76301", font=("Arial", 12), command=save_info)
+    save_button = tkinter.Button(frame_2, text="Submit", bg="#F5AE52", fg="#F76301", font=("Arial", 12), command=save_info)
     save_button.pack(pady=10)
 
 
