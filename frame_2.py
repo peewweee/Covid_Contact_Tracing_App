@@ -62,19 +62,24 @@ def create_frame_2(parent_frame):
 
     # Symptoms
     label_symptoms = tkinter.Label(symptoms_expo, text="Symptoms experienced in the past 7 days (Check all that apply):", bg="#3F1651", fg="#E6A1D7", font=("Arial", 11))
-    label_symptoms.grid(row=0, column=1, columnspan=2, padx=10, pady=5, sticky="n")
+    label_symptoms.grid(row=0, column=1, columnspan=3, padx=10, pady=5, sticky="n")
     symptoms_options = ["Fever", "Cough", "Colds", "Muscle/body pains", "Sore throat", "Diarrhea", "Headache", "Shortness of breath", "Difficulty of breathing", "Loss of taste", "Loss of smell", "None of the above"]
     var_symptoms = []
 
-    for idx, option in enumerate(symptoms_options[:6]):
+    for idx, option in enumerate(symptoms_options[:4]):
         var_symptoms.append(tkinter.IntVar())
-        check_button2 = tkinter.Checkbutton(symptoms_expo, text=option, variable=var_symptoms[idx], bg="#3F1651", fg="#E6A1D7", font=("Arial", 10))
-        check_button2.grid(row=idx + 1, column=1, padx=10, sticky="w")
+        check_button = tkinter.Checkbutton(symptoms_expo, text=option, variable=var_symptoms[idx], bg="#3F1651", fg="#E6A1D7", font=("Arial", 10))
+        check_button.grid(row=idx + 1, column=1, padx=10, sticky="w")
 
-    for idx, option in enumerate(symptoms_options[6:]):
+    for idx, option in enumerate(symptoms_options[4:8]):
         var_symptoms.append(tkinter.IntVar())
-        check_button2 = tkinter.Checkbutton(symptoms_expo, text=option, variable=var_symptoms[6 + idx], bg="#3F1651", fg="#E6A1D7", font=("Arial", 10))
-        check_button2.grid(row=idx + 1, column=2, padx=10, sticky="w")
+        check_button = tkinter.Checkbutton(symptoms_expo, text=option, variable=var_symptoms[idx + 4], bg="#3F1651", fg="#E6A1D7", font=("Arial", 10))
+        check_button.grid(row=idx + 1, column=2, padx=10, sticky="w")
+
+    for idx, option in enumerate(symptoms_options[8:]):
+        var_symptoms.append(tkinter.IntVar())
+        check_button = tkinter.Checkbutton(symptoms_expo, text=option, variable=var_symptoms[idx + 8], bg="#3F1651", fg="#E6A1D7", font=("Arial", 10))
+        check_button.grid(row=idx + 1, column=3, padx=10, sticky="w")
 
     # save information
     def save_info():

@@ -8,7 +8,7 @@ def show_next_page():
 
 window = tkinter.Tk()
 window.title("Trace Me")
-window.geometry("840x440")
+window.geometry("880x440")
 window.configure(bg="#934AB3")
 
 frame = tkinter.Frame(bg="#934AB3")
