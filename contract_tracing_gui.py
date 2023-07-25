@@ -9,18 +9,17 @@ def show_next_page():
 window = tkinter.Tk()
 window.title("Trace Me")
 window.geometry("880x440")
-window.configure(bg="#653780")
+
+app_bg = tkinter.PhotoImage(file="app_background.png")
+
+bg_label = tkinter.Label(window, image=app_bg)
+bg_label.place(x=0, y=0, relwidth=1, relheight=1)
 
 frame = tkinter.Frame(bg="#653780")
 
 # frame 1 widgets
-label_name = tkinter.Label(frame, text="Trace Me", bg="#653780", fg="#F7E7FB", font=("Arial", 18))
 start_button = tkinter.Button(frame, text="Start", bg="#F5AE52", fg="#F76301", font=("Arial", 16), command=show_next_page)
-label_message = tkinter.Label(frame, text="Tara na sa ligtas na gala!", bg="#653780", fg="#E0C2F2", font=("Arial", 13))
-
-label_name.grid(row=0, column=0, pady=30)
-start_button.grid(row=1, column=0, pady=10)
-label_message.grid(row=2, column=0)
+start_button.grid(row=3, column=2, pady=10)
 
 frame.pack()
 
