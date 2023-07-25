@@ -44,10 +44,13 @@ def create_frame_3(parent_frame):
     info_data = tkinter.LabelFrame(frame_3, text="Search Information Entries", bg="#E6A1D7", fg="#3F1651", font=("Arial", 12, "bold"))
     info_data.pack(pady=20, padx=20, fill=tkinter.BOTH, expand=True)
 
+    # center layout
+    tkinter.Label(info_data, text="", bg="#E6A1D7").grid(row=1, column=0)
+
     # Search
     search_label = tkinter.Label(info_data, text="Search:", bg="#E6A1D7", fg="#61346B", font=("Arial", 12))
     search_label.grid(row=0, column=0, padx=10, pady=10, sticky="e")
-    search_entry = tkinter.Entry(info_data, bg="white", fg="black", font=("Arial", 12), width=55)
+    search_entry = tkinter.Entry(info_data, bg="#F89F5B", fg="#74006F", font=("Arial", 12), width=55)
     search_entry.grid(row=0, column=1, pady=10, sticky="w")
 
     # Search button
