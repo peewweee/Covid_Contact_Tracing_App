@@ -12,11 +12,18 @@ def create_frame_3(parent_frame):
             lines = file.readlines()
 
         current_entry = ""
+        current_info = []
         for line in lines:
             if line.startswith("Name: "):
+                if current_entry and search_data in current_entry.lower():
+                    found_entries.append(current_entry + "\n" + "\n".join(current_info))
                 current_entry = line[6:].strip()
-            if search_data in line.lower():
-                found_entries.append(current_entry + "\n" + line)
+                current_info = []
+            current_info.append(line.strip())
+
+        # check for last entry
+        if current_entry and search_data in current_entry.lower():
+            found_entries.append(current_entry + "\n" + "\n".join(current_info))
 
         if found_entries:
             result_text.config(state=tkinter.NORMAL)
