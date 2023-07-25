@@ -1,20 +1,28 @@
-
 Name: Phoebe Gangoso
-Age: 20
-Phone Number: 09776092939
-Vaccination: First Dose
-COVID-19 Test: Tested (Positive)
+Age: 0
+Phone Number: 13
+Vaccination: 
+COVID-19 Test: 
 Symptoms:
-- Sore throat
-- Loss of smell
 COVID-19 Exposure:
-- Exposure to cluster of individuals with flu-like illness
-Name: Mika Gangoso
-Age: 21
-Phone Number: 09329116556
-Vaccination: First Booster Shot
-COVID-19 Test: Tested (Positive)
+Name: Phoebe Gangoso
+Age: 0
+Phone Number: 2
+Vaccination: 
+COVID-19 Test: 
 Symptoms:
-- Loss of smell
 COVID-19 Exposure:
-- Exposure to cluster of individuals with flu-like illness
+Name: 
+Age: 0
+Phone Number: 3
+Vaccination: 
+COVID-19 Test: 
+Symptoms:
+COVID-19 Exposure:
+Name: 
+Age: 0
+Phone Number: 9
+Vaccination: 
+COVID-19 Test: 
+Symptoms:
+COVID-19 Exposure:
